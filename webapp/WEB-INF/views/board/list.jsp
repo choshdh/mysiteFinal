@@ -55,7 +55,7 @@
 					<c:forEach items="${listPage.l }" var="bvo">
 						<tr>
 							<td>${bvo.no }</td>
-							<td><a href="${pageContext.request.contextPath}/board/view?bno=${bvo.no }">${bvo.title }</a></td>
+							<td><a href="${pageContext.request.contextPath}/board/view?bno=${bvo.no }&selectPage=${listPage.selectPage}&kwd=${listPage.keyWord}&searchType=${listPage.searchType}">${bvo.title }</a></td>
 							<td>${bvo.name }</td>
 							<td>${bvo.hit }</td>
 							<td>${bvo.regDate }</td>
