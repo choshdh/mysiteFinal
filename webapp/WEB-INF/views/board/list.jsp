@@ -98,7 +98,14 @@
 				 				
 				 				
 				 				<c:otherwise><!-- 인덱스 번호가 최대 페이지 숫자보다 클때 -->
-				 					<li>${status.index}</li>
+				 					<c:choose>
+				 						<c:when test="${status.index==listPage.selectPage}"><!-- 인덱스 번호가 선택한 페이지라면 select 옵션 추가 -->		
+											<li class="selected">${status.index}</li>
+										</c:when>
+				 						<c:otherwise>
+				 							<li>${status.index}</li>
+				 						</c:otherwise>
+				 					</c:choose>
 				 				</c:otherwise>
 				 			</c:choose>
 				 			
